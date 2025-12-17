@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/yourusername/masi-bus/main/schema/masi-bus-schema.json",
+  "title": "MASI Bus Message Schema",
+  "description": "Canonical schema for all messages on the MASI Bus (v1.0 – December 2025)",
+  "type": "object",
+  "required": [
+    "message_type",
+    "sender_role",
+    "task_id",
+    "content",
+    "metrics",
+    "audit_trail"
+  ],
+  "properties": {
+    "message_type": {
+      "type": "string",
+      "enum": [
+        "TASK_INIT",
+        "ROLE_ANALYSIS",
+        "ROLE_CRITIQUE",
+        "RESOLUTION_PROPOSAL",
+        "ARBITRATION_REQUEST",
+        "FINAL_OUTPUT",
+        "ESCALATION"
+      ]
+    },
+    "sender_role": {
+      "type": "string",
+      "examples": ["Wisdom", "Foresight", "Empathy", "Precision", "CustomVerifier"]
+    },
+    "task_id": { "type": "string", "format": "uuid" },
+    "content": {
+      "type": "object",
+      "required": ["analysis"],
+      "properties": {
+        "analysis": { "type": "string" },
+        "assertions": { "type": "array", "items": { "type": "string" } },
+        "proposed_action": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "metrics": {
+      "type": "object",
+      "required": ["confidence", "cost"],
+      "properties": {
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "cost": { "type": "number", "minimum": 0 },
+        "trust_score_delta": { "type": "number" },
+        "risk_quantification": {
+          "type": "object",
+          "properties": {
+            "low": { "type": "number" },
+            "medium": { "type": "number" },
+            "high": { "type": "number" }
+          }
+        }
+      }
+    },
+    "verifiable_credentials": {
+      "type": "object",
+      "properties": {
+        "module_cert_id": { "type": "string" },
+        "ethical_flags": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "audit_trail": {
+      "type": "object",
+      "required": ["timestamp"],
+      "properties": {
+        "timestamp": { "type": "string", "format": "date-time" },
+        "previous_message_id": { "type": "string" },
+        "conflicts": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  },
+  "additionalProperties": false
+}
