@@ -1,0 +1,14 @@
+{
+  "message_type": "ROLE_ANALYSIS",
+  "sender_role": "Wisdom",
+  "task_id": "e4b3c1d2-5678-90ab-cdef-1234567890ab",
+  "content": {
+    "analysis": "Prudence suggests evaluating past chatbot failures to avoid over-reliance on unproven scaling patterns."
+  },
+  "metrics": { "confidence": 0.78, "cost": 0.018, "trust_score_delta": 0.09 },
+  "verifiable_credentials": { "module_cert_id": "wisdom-v1.0-cert" },
+  "audit_trail": {
+    "timestamp": "2025-12-16T12:00:05Z",
+    "previous_message_id": "01_task_init"
+  }
+}
