@@ -1,0 +1,10 @@
+{
+  "message_type": "ROLE_ANALYSIS",
+  "sender_role": "Empathy",
+  "task_id": "e4b3c1d2-5678-90ab-cdef-1234567890ab",
+  "content": {
+    "analysis": "Potential for user frustration if responses are inaccurate; recommend continuous bias monitoring."
+  },
+  "metrics": { "confidence": 0.91, "cost": 0.012, "trust_score_delta": 0.14 },
+  "audit_trail": { "timestamp": "2025-12-16T12:00:15Z", "previous_message_id": "03_foresight_critique" }
+}
