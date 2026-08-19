@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/yourusername/masi-bus/main/schema/masi-bus-schema.json",
+  "$id": "https://raw.githubusercontent.com/JosephJMWalker-MBA/masi-bus/main/schema/masi-bus-schema.json",
   "title": "MASI Bus Message Schema",
   "description": "Canonical schema for all messages on the MASI Bus (v1.0 – December 2025)",
   "type": "object",
