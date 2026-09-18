@@ -42,6 +42,8 @@ These fields provide a common envelope for heterogeneous modules to communicate 
 - `examples/05_precision_resolution.json` — example Precision-role resolution proposal
 - `benchmarks/TEMPLATE.md` — template for reporting empirical or clearly identified simulated benchmark results
 - `CONTRIBUTING.md` — contribution and extension guidance
+- `AGENTS.md` — repository operating guidance for AI-assisted work
+- `docs/EPISTEMIC_INTEGRITY.md` — protocol guidance for truthful failure, authority conservation, and escalation
 
 ## Quick Start
 
@@ -61,7 +63,9 @@ The broader MASI disclosure frames this around ideas including:
 - explicit disagreement and critique;
 - governance and auditability;
 - trust and risk metadata; and
-- escalation when modules cannot safely resolve a conflict.
+- escalation when modules cannot safely resolve a conflict;
+- epistemic integrity under optimization pressure; and
+- authority conservation: a proposal, score, successful action, or module consensus does not create authorization.
 
 MASI Bus is the message-layer artifact for exploring those ideas. It does not prove that any particular role decomposition, trust metric, or governance scheme improves model quality or safety; those claims require empirical evaluation.
 
